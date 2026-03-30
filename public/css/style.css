@@ -30,3 +30,33 @@ h1 {
     height: auto;        /* Keeps the proportions correct */
     border-radius: 8px;  /* Optional: Makes them look a bit nicer */
 }
+
+/* This puts the two groups side-by-side */
+.portfolio-container {
+    display: flex;
+    justify-content: center; /* Centers the whole block */
+    gap: 40px;               /* Space between Michał's group and Dawid's group */
+    padding: 20px;
+}
+
+/* This stacks the image and the name vertically within each group */
+.portfolio-item {
+    display: flex;
+    flex-direction: column;  /* Stacks children (img and p) vertically */
+    align-items: center;     /* Centers the text under the image */
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 200px;            /* Set a consistent width */
+    height: 200px;           /* Set a height */
+    object-fit: cover;       /* Crops image to fit the square without stretching */
+    border-radius: 10px;     /* Optional: rounded corners */
+    margin-bottom: 10px;     /* Space between image and the name */
+}
+
+.portfolio-item p {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.2rem;
+}
