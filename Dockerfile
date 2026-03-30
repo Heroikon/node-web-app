@@ -1,0 +1,12 @@
+FROM node:20
+WORKDIR /usr/src/app
+# Kopiowanie plików package.json i package-lock.json do kontenera
+COPY package*.json ./
+# Instalowanie zależności aplikacji
+RUN npm install
+# Kopiowanie całego kodu aplikacji do kontenera
+COPY . .
+# Otwieranie portu 8081
+EXPOSE 8081
+# Komenda uruchamiająca aplikację
+CMD ["node", "server.js"]
