@@ -48,8 +48,8 @@ h1 {
 }
 
 .portfolio-item img {
-    width: 200px;            /* Set a consistent width */
-    height: 200px;           /* Set a height */
+    width: 500px;            /* Set a consistent width */
+    height: 500px;           /* Set a height */
     object-fit: cover;       /* Crops image to fit the square without stretching */
     border-radius: 10px;     /* Optional: rounded corners */
     margin-bottom: 10px;     /* Space between image and the name */
