@@ -9,49 +9,5 @@
     <h1>testtt</h1>
     <p><%= message %></p>
 
-<script>
-const express = require('express');
-const app = express();
-const path = require('path');
-
-// Ustawienie silnika EJS
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-// Serwowanie plików statycznych z folderu public
-app.use(express.static(path.join(__dirname, 'public')));
-
-// --- ROUTING ---
-
-app.get('/', (req, res) => {
-    res.render('index', { title: 'Home' });
-});
-
-app.get('/about', (req, res) => {
-    res.render('about', { title: 'Nasza Oferta' });
-});
-
-app.get('/contact', (req, res) => {
-    res.render('contact', { title: 'Kontakt' });
-});
-
-// Eksport dla Vercela
-module.exports = app;
-
-// Opcjonalne dla lokalnego testowania:
-// app.listen(3000, () => console.log('Server runs on http://localhost:3000'));
-</script>
-<br><br>
-<nav>
-    <div class="logo">Moje Portfolio</div>
-    <ul>
-        <li><a href="/">Strona Główna</a></li>
-<br><br>
-        <li><a href="/about">Oferta</a></li>
-<br><br>
-        <li><a href="/contact">Kontakt</a></li>
-    </ul>
-</nav>
-
 </body>
 </html>
