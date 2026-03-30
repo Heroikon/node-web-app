@@ -1,3 +1,7 @@
+const path = require('path');
+
+// This tells Express: "Find the folder named 'public' in the same directory as this script"
+app.use(express.static(path.join(__dirname, 'public')));
 <!DOCTYPE html>
 <html>
 <head>
