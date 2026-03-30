@@ -16,3 +16,17 @@ nav a:hover {
 h1 {
     color: #2c3e50;
 }
+
+.image-container {
+    display: flex;       /* This turns on Flexbox */
+    flex-direction: row; /* Aligns items horizontally */
+    gap: 20px;          /* Adds space between the images */
+    justify-content: center; /* Centers the images on the page */
+    align-items: center;     /* Aligns them vertically if they have different heights */
+}
+
+.image-container img {
+    max-width: 300px;    /* Optional: Prevents images from being too huge */
+    height: auto;        /* Keeps the proportions correct */
+    border-radius: 8px;  /* Optional: Makes them look a bit nicer */
+}
