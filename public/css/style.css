@@ -61,38 +61,43 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* 1. The Container (The Row) */
+/* Kontener galerii */
 .gallery-container {
-    display: flex;         /* Turn on Flexbox */
-    flex-direction: row;   /* Explicitly set to a row */
-    gap: 1px;            /* Perfect, equal spacing between items */
-    width: 100%;          /* Fill the screen width */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;      /* Pozwala przenosić zdjęcia do nowej linii na telefonach */
+    gap: 10px;            /* MAŁA PRZERWA między zdjęciami */
+    justify-content: center; /* Centruje całą grupę zdjęć */
+    width: 100%;
     padding: 20px;
-    box-sizing: border-box; /* Important for padding */
+    box-sizing: border-box;
 }
 
-/* 2. The Items (The Children) */
+/* Pojedynczy element galerii */
 .gallery-item {
-    flex-grow: 1;          /* Key: Make all items stretch EQUALLY */
-    flex-basis: 0;         /* Treat their starting size as zero to ensure perfect equality */
-    
-    /* THE MAGIC: Fixed Aspect Ratio */
-    /* This makes the height always equal to the width (a perfect square) */
-    aspect-ratio: 1 / 1;   
-    /* For a standard widescreen (16:9), you'd use: aspect-ratio: 16 / 9; */
-
-    /* Basic Styling for visibility */
-    display: flex;         /* Optional: To center content INSIDE the item */
-    justify-content: center;
-    align-items: center;
+    /* Usuwamy flex-grow i flex-basis, żeby kontenery nie puchły na siłę */
+    width: 250px;         /* Ustawiamy stałą szerokość kontenera */
+    position: relative;
+    overflow: hidden;
     border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
+    aspect-ratio: 1 / 1;  /* Robi z nich idealne kwadraty */
 }
 
-/* Optional Colors to make them stand out */
-.item-1 { background-color: #3498db; } /* Blue */
-.item-2 { background-color: #e74c3c; } /* Red */
-.item-3 { background-color: #2ecc71; } /* Green */
-.item-4 { background-color: #f1c40f; } /* Yellow */
+/* Obrazek wewnątrz galerii */
+.gallery-item img {
+    width: 100%;          /* Obrazek wypełnia równe 250px kontenera */
+    height: 100%;         /* Wypełnia wysokość */
+    object-fit: cover;    /* Przycina zdjęcie do kwadratu, żeby nie było rozciągnięte */
+}
+
+/* Naprawa Twoich napisów pod rybami */
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
