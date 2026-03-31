@@ -76,7 +76,7 @@ h1 {
 /* Pojedynczy element galerii */
 .gallery-item {
     /* Usuwamy flex-grow i flex-basis, żeby kontenery nie puchły na siłę */
-    width: 250px;         /* Ustawiamy stałą szerokość kontenera */
+    width: 350px;         /* Ustawiamy stałą szerokość kontenera */
     position: relative;
     overflow: hidden;
     border-radius: 12px;
