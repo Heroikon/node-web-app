@@ -3,31 +3,77 @@
 <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        button {
+            margin: 5px 0;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+    </style>
+
+    <script>
+    function toggle(id) {
+        var el = document.getElementById(id);
+        if (el.style.display === "none" || el.style.display === "") {
+            el.style.display = "block";
+        } else {
+            el.style.display = "none";
+        }
+    }
+    </script>
 </head>
+
 <body>
     <%- include('partials/navbar') %>
+
     <h1>Strona Ooooooo NAS</h1>
-    <p>
- <h2>O nas</h2>
+
+    <h2>O nas</h2>
+
     <p>Cześć! Jesteśmy Dawid i Michał.</p>
+
     <p><strong>Dawid</strong> zajmuje się tworzeniem stron internetowych. 
-    Projektuje nowoczesne, przejrzyste i funkcjonalne witryny, dopasowane do potrzeb klientów.</p>
+    Projektuje nowoczesne, przejrzyste i funkcjonalne witryny.</p>
 
     <p><strong>Michał</strong> pasjonuje się wędkarstwem. 
-    Wolny czas spędza nad wodą, łowiąc ryby i testując różne techniki połowu.</p>
+    Wolny czas spędza nad wodą, łowiąc ryby.</p>
 
     <p>Łączymy technologię z pasją – jeden buduje strony, drugi łowi ryby. 🎣💻</p>
 
-    <p>Chcesz wersję bardziej:</p>
-    <ul>
-        <li>oficjalną</li>
-        <li>śmieszną</li>
-        <li>dłuższą</li>
-        <li>czy bardzo krótką?</li>
-    </ul>
+    <h3>Chcesz wersję bardziej:</h3>
 
-</body>
-</html>
-</p>
+    <button onclick="toggle('oficjalna')">Oficjalną</button><br>
+    <button onclick="toggle('smieszna')">Śmieszną</button><br>
+    <button onclick="toggle('dluzsza')">Dłuższą</button><br>
+    <button onclick="toggle('krotka')">Bardzo krótką</button>
+
+    <div id="oficjalna" class="content">
+        Dawid specjalizuje się w projektowaniu i tworzeniu nowoczesnych stron internetowych.
+        Michał rozwija swoją pasję do wędkarstwa. Razem tworzą duet łączący technologię z hobby.
+    </div>
+
+    <div id="smieszna" class="content">
+        Dawid łowi klientów, Michał łowi ryby. Każdy robi swoje. 🎣💻
+    </div>
+
+    <div id="dluzsza" class="content">
+        Jesteśmy Dawid i Michał. Dawid tworzy strony internetowe i dba o ich wygląd oraz funkcjonalność.
+        Michał spędza czas nad wodą, rozwijając swoją pasję do wędkarstwa i testując różne techniki połowu.
+        Razem łączymy kreatywność z cierpliwością.
+    </div>
+
+    <div id="krotka" class="content">
+        Dawid robi strony. Michał łowi ryby.
+    </div>
+
 </body>
 </html>
