@@ -4,32 +4,31 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
 
-    <style>
-        button {
-            margin: 5px 0;
-            padding: 8px 12px;
-            cursor: pointer;
-        }
+<style>
+.toggle-btn {
+    margin: 15px 0 5px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+}
 
-        .content {
-            display: none;
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-    </style>
-
-    <script>
-    function toggle(id) {
-        var el = document.getElementById(id);
-        if (el.style.display === "none" || el.style.display === "") {
-            el.style.display = "block";
-        } else {
-            el.style.display = "none";
-        }
+.content {
+    display: none;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+</style>
+<script>
+function toggle(id) {
+    var el = document.getElementById(id);
+    if (el.style.display === "none" || el.style.display === "") {
+        el.style.display = "block";
+    } else {
+        el.style.display = "none";
     }
-    </script>
+}
+</script>
 </head>
 
 <body>
@@ -49,31 +48,29 @@
 
     <p>Łączymy technologię z pasją – jeden buduje strony, drugi łowi ryby. 🎣💻</p>
 
-    <h3>Chcesz wersję bardziej:</h3>
+<h3>Chcesz wersję bardziej:</h3>
 
-    <button onclick="toggle('oficjalna')">Oficjalną</button><br>
-    <button onclick="toggle('smieszna')">Śmieszną</button><br>
-    <button onclick="toggle('dluzsza')">Dłuższą</button><br>
-    <button onclick="toggle('krotka')">Bardzo krótką</button>
+<button class="toggle-btn" onclick="toggle('oficjalna')">Oficjalną</button>
+<div id="oficjalna" class="content">
+Dawid specjalizuje się w projektowaniu i tworzeniu nowoczesnych stron internetowych.
+Michał rozwija swoją pasję do wędkarstwa. Razem tworzą duet łączący technologię z hobby.
+</div>
 
-    <div id="oficjalna" class="content">
-        Dawid specjalizuje się w projektowaniu i tworzeniu nowoczesnych stron internetowych.
-        Michał rozwija swoją pasję do wędkarstwa. Razem tworzą duet łączący technologię z hobby.
-    </div>
+<button class="toggle-btn" onclick="toggle('smieszna')">Śmieszną</button>
+<div id="smieszna" class="content">
+Dawid łowi klientów, Michał łowi ryby. Każdy robi swoje. 🎣💻
+</div>
 
-    <div id="smieszna" class="content">
-        Dawid łowi klientów, Michał łowi ryby. Każdy robi swoje. 🎣💻
-    </div>
+<button class="toggle-btn" onclick="toggle('dluzsza')">Dłuższą</button>
+<div id="dluzsza" class="content">
+Jesteśmy Dawid i Michał. Dawid tworzy strony internetowe, a Michał łowi ryby.
+Łączymy technologię z pasją.
+</div>
 
-    <div id="dluzsza" class="content">
-        Jesteśmy Dawid i Michał. Dawid tworzy strony internetowe i dba o ich wygląd oraz funkcjonalność.
-        Michał spędza czas nad wodą, rozwijając swoją pasję do wędkarstwa i testując różne techniki połowu.
-        Razem łączymy kreatywność z cierpliwością.
-    </div>
-
-    <div id="krotka" class="content">
-        Dawid robi strony. Michał łowi ryby.
-    </div>
+<button class="toggle-btn" onclick="toggle('krotka')">Bardzo krótką</button>
+<div id="krotka" class="content">
+Dawid robi strony. Michał łowi ryby.
+</div>
 
 </body>
 </html>
