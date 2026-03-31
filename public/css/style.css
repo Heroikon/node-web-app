@@ -65,7 +65,7 @@ h1 {
 .gallery-container {
     display: flex;         /* Turn on Flexbox */
     flex-direction: row;   /* Explicitly set to a row */
-    gap: 20px;            /* Perfect, equal spacing between items */
+    gap: 1px;            /* Perfect, equal spacing between items */
     width: 100%;          /* Fill the screen width */
     padding: 20px;
     box-sizing: border-box; /* Important for padding */
