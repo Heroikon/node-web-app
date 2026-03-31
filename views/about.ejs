@@ -72,5 +72,35 @@ Jesteśmy Dawid i Michał. Dawid tworzy strony internetowe, a Michał łowi ryby
 Dawid robi strony. Michał łowi ryby.
 </div>
 
+<h3>Księga gości</h3>
+
+<ul id="guestList">
+    <li>Dawid — Fajna strona 👍</li>
+    <li>Michał — Pozdrawiam z nad wody 🎣</li>
+</ul>
+
+<h4>Dodaj się do listy</h4>
+
+<input type="text" id="guestName" placeholder="Twoje imię">
+<input type="text" id="guestMsg" placeholder="Wiadomość">
+<button onclick="addGuest()">Dodaj</button>
+
+<script>
+function addGuest() {
+    const name = document.getElementById("guestName").value;
+    const msg = document.getElementById("guestMsg").value;
+
+    if(name.trim() === "") return;
+
+    const li = document.createElement("li");
+    li.textContent = name + " — " + msg;
+
+    document.getElementById("guestList").appendChild(li);
+
+    document.getElementById("guestName").value = "";
+    document.getElementById("guestMsg").value = "";
+}
+</script>
+
 </body>
 </html>
