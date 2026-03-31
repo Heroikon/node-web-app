@@ -87,8 +87,7 @@ h1 {
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Changed from 'cover' to 'contain' */
-    background-color: #f0f0f0; /* Optional: adds a light grey background to the empty gaps */
+    object-fit: cover; /* Changed from 'cover' to 'contain' */
 }
 
 /* Naprawa Twoich napisów pod rybami */
