@@ -60,3 +60,39 @@ h1 {
     margin: 0;
     font-size: 1.2rem;
 }
+
+/* 1. The Container (The Row) */
+.gallery-container {
+    display: flex;         /* Turn on Flexbox */
+    flex-direction: row;   /* Explicitly set to a row */
+    gap: 20px;            /* Perfect, equal spacing between items */
+    width: 100%;          /* Fill the screen width */
+    padding: 20px;
+    box-sizing: border-box; /* Important for padding */
+}
+
+/* 2. The Items (The Children) */
+.gallery-item {
+    flex-grow: 1;          /* Key: Make all items stretch EQUALLY */
+    flex-basis: 0;         /* Treat their starting size as zero to ensure perfect equality */
+    
+    /* THE MAGIC: Fixed Aspect Ratio */
+    /* This makes the height always equal to the width (a perfect square) */
+    aspect-ratio: 1 / 1;   
+    /* For a standard widescreen (16:9), you'd use: aspect-ratio: 16 / 9; */
+
+    /* Basic Styling for visibility */
+    display: flex;         /* Optional: To center content INSIDE the item */
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Optional Colors to make them stand out */
+.item-1 { background-color: #3498db; } /* Blue */
+.item-2 { background-color: #e74c3c; } /* Red */
+.item-3 { background-color: #2ecc71; } /* Green */
+.item-4 { background-color: #f1c40f; } /* Yellow */
